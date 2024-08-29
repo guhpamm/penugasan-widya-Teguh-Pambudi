@@ -12,8 +12,8 @@ DHT dht(15, DHT22);
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-const char temp_topic = "daq1/suhu";
-const char hum_topic = "daq1/kelembapan";
+const char* temp_topic = "daq1/suhu";
+const char* hum_topic = "daq1/kelembapan";
 
 void reconnect(){
   while(!client.connected()){
