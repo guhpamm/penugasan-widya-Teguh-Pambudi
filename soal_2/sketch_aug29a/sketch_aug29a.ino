@@ -2,9 +2,9 @@
 #include<WiFi.h>
 #include<PubSubClient.h>
 
-const char* ssid = "GuhpamWiFi";
-const char* password = "";
-const char* mqtt_server = "192.168.1.100";
+const char ssid = "GuhpamWiFi";
+const char password = "";
+const char mqtt_server = "192.168.1.100";
 const int mqtt_port = 1883;
 
 DHT dht(15, DHT22);
@@ -12,8 +12,8 @@ DHT dht(15, DHT22);
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-const char* temp_topic = "daq1/suhu";
-const char* hum_topic = "daq1/kelembapan";
+const char temp_topic = "daq1/suhu";
+const char hum_topic = "daq1/kelembapan";
 
 void reconnect(){
   while(!client.connected()){
